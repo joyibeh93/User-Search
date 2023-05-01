@@ -39,6 +39,8 @@ body{
 /* styling staff Contact */
 .staffContact{
     display: flex;
+    width: 640px;
+    flex-wrap: wrap;
 
 }
 

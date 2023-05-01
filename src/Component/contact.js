@@ -5,7 +5,7 @@ function contact(props) {
     <div className='contacts-container'>
         <div className='contacts'>
                 <div>
-                    <img src={props.imgUrl} alt="staff-info" width={70}/>
+                    <img src={props.img} alt="staff-info" width={70}/>
                 </div>
                 <p className='contact-info'>
                   {props.id} 
