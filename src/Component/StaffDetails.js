@@ -1,29 +1,29 @@
 import React from 'react'
 import Contact from './contact'
-import Search from './Search'
-import info from './StaffInfo'
+import Staffs from './StaffInfo'
 
-function createStaffInfo(info){
+function createStaffInfo(staff){
     return <Contact
-            img={info.imgUrl}
-            key={info.id}
-            id={info.id}
-            title={info.title}
-            lastname= {info.lastname}
-            firstname={info.firstname}
+            img={staff.imgUrl}
+            key={staff.id}
+            id={staff.id}
+            title={staff.title}
+            lastname= {staff.lastname}
+            firstname={staff.firstname}
             />
         
     
 }
 
-function StaffDetails() {
+function StaffDetails(props) {
+  
   return (
     <div className='staffContainer'>
-         <Search/>
+
        
         <div className='staffContact'>
              <div className='staffContact'>
-                {info.map(createStaffInfo)}
+                {Staffs.filter(staff=>staff.firstname.toLocaleLowerCase().includes(props.data)).map(createStaffInfo)}
             </div>
         </div>
     
